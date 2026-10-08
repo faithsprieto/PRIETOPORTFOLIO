@@ -956,37 +956,17 @@ li {
 
 .cert-prev,
 .cert-next {
-    width: 45px;
-    height: 45px;
     flex-shrink: 0;
-
     border: none;
-    border-radius: 20px;
-
-    background: rgba(255, 255, 255, 0.35);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.1),
-        inset 0 1px 1px rgba(255, 255, 255, 0.6);
-
-    color: white;
-    font-size: 24px;
+    background: none;
+    font-size: 30px;
     cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: 0.2s ease;
+    padding: 10px;
 }
 
 .cert-prev:hover,
 .cert-next:hover {
-    transform: scale(1.08);
+    transform: scale(1.1);
 }
 
 .cert-prev:disabled,
@@ -1096,37 +1076,17 @@ li {
 
 .comic-prev,
 .comic-next {
-    width: 45px;
-    height: 45px;
     flex-shrink: 0;
-
     border: none;
-    border-radius: 20px;
-
-    background: rgba(255, 255, 255, 0.35);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.1),
-        inset 0 1px 1px rgba(255, 255, 255, 0.6);
-
-    color: white;
-    font-size: 24px;
+    background: none;
+    font-size: 30px;
     cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: 0.2s ease;
+    padding: 10px;
 }
 
 .comic-prev:hover,
 .comic-next:hover {
-    transform: scale(1.08);
+    transform: scale(1.1);
 }
 
 .comic-prev:disabled,
@@ -1242,37 +1202,17 @@ li {
 
 .news-prev,
 .news-next {
-    width: 45px;
-    height: 45px;
     flex-shrink: 0;
-
     border: none;
-    border-radius: 20px;
-
-    background: rgba(255, 255, 255, 0.35);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.1),
-        inset 0 1px 1px rgba(255, 255, 255, 0.6);
-
-    color: white;
-    font-size: 24px;
+    background: none;
+    font-size: 30px;
     cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: 0.2s ease;
+    padding: 10px;
 }
 
 .news-prev:hover,
 .news-next:hover {
-    transform: scale(1.08);
+    transform: scale(1.1);
 }
 
 .news-prev:disabled,
@@ -1322,7 +1262,8 @@ li {
    LAYOUT ARTIST & CAPTION WRITER CAROUSEL
    ========================= */
 
-.pubwork-daily {
+.pubwork-daily,
+.personalwork {
     margin-bottom: 60px;
 }
 
@@ -1375,30 +1316,17 @@ li {
 
 .daily-prev,
 .daily-next {
-    width: 45px;
-    height: 45px;
     flex-shrink: 0;
     border: none;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.35);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.1),
-        inset 0 1px 1px rgba(255, 255, 255, 0.6);
-    color: white;
-    font-size: 24px;
+    background: none;
+    font-size: 30px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.2s ease;
+    padding: 10px;
 }
 
 .daily-prev:hover,
 .daily-next:hover {
-    transform: scale(1.08);
+    transform: scale(1.1);
 }
 
 .daily-prev:disabled,
@@ -1436,12 +1364,15 @@ li {
     }
 
     .daily-prev,
-    .daily-next {
-        width: 35px;
+    .daily-next {  
+    width: 35px;
         height: 35px;
         font-size: 18px;
-    }
 }
+
+
+    }
+
 
 
 /* =========================
@@ -1531,6 +1462,98 @@ li {
         max-width: 350px;
     }
 }
+
+
+
+/* POSTCARDS CAROUSEL */
+
+.postcards-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 10px;
+}
+
+.postcards-carousel-window {
+    width: 100%;
+    overflow: hidden;
+}
+
+.postcards-display {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.postcard-item {
+    flex: 0 0 calc((100% - 40px) / 5);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.postcard-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.postcard-item img:hover {
+    transform: scale(1.03);
+}
+
+.postcard-item p {
+    margin-top: 10px;
+}
+
+.postcards-prev,
+.postcards-next {
+    flex-shrink: 0;
+    border: none;
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.postcards-prev:hover,
+.postcards-next:hover {
+    transform: scale(1.1);
+}
+
+.postcards-carousel-window {
+    width: 100%;
+    overflow: hidden;
+}
+
+.postcards-display {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.4s ease;
+}
+
+
+@media (max-width: 1000px) {
+    .postcard-item {
+        flex: 0 0 calc((100% - 10px) / 2);
+    }
+}
+
+@media (max-width: 500px) {
+    .postcard-item {
+        flex: 0 0 100%;
+    }
+}
+
+
+
+
+
+
+
 
 
 /* styles for footer */

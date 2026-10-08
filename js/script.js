@@ -1,4 +1,14 @@
 /* =========================
+   MOBILE HAMBURGER MENU
+========================= */
+
+function toggleMenu() {
+    const nav = document.querySelector(".navbar nav");
+
+    nav.classList.toggle("active");
+}
+
+/* =========================
    SHARED CAROUSEL HELPERS
 ========================= */
 
@@ -48,6 +58,8 @@ const certState = { page: 0 };
 const comicState = { page: 0 };
 const newsState = { page: 0 };
 const dailyState = { page: 0 };
+const postcardState = { page: 0 };
+
 
 function moveCerts(direction) {
     moveCarousel('certTrack', '.webinarcert', '.cert-prev', '.cert-next', certState, direction);
@@ -63,6 +75,17 @@ function moveNews(direction) {
 
 function moveDaily(direction) {
     moveCarousel('dailyTrack', '.pubwork-daily-item', '.daily-prev', '.daily-next', dailyState, direction);
+}
+
+function movePostcards(direction) {
+    moveCarousel(
+        'postcardsTrack',
+        '.postcard-item',
+        '.postcards-prev',
+        '.postcards-next',
+        postcardState,
+        direction
+    );
 }
 
 /* =========================================================
@@ -275,6 +298,7 @@ document.addEventListener('DOMContentLoaded', function () {
     resetCarousel('comicTrack', '.pubwork-comic-item', '.comic-prev', '.comic-next', comicState);
     resetCarousel('newsTrack', '.pubwork-news-item', '.news-prev', '.news-next', newsState);
     resetCarousel('dailyTrack', '.pubwork-daily-item', '.daily-prev', '.daily-next', dailyState);
+    resetCarousel('postcardsTrack', '.postcard-item', '.postcards-prev', '.postcards-next', postcardState);
 });
 
 window.addEventListener('resize', function () {
@@ -282,4 +306,6 @@ window.addEventListener('resize', function () {
     resetCarousel('comicTrack', '.pubwork-comic-item', '.comic-prev', '.comic-next', comicState);
     resetCarousel('newsTrack', '.pubwork-news-item', '.news-prev', '.news-next', newsState);
     resetCarousel('dailyTrack', '.pubwork-daily-item', '.daily-prev', '.daily-next', dailyState);
+    resetCarousel('postcardsTrack', '.postcard-item', '.postcards-prev', '.postcards-next', postcardState);
 });
+
